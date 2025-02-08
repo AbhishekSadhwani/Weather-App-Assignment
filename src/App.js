@@ -7,17 +7,8 @@ import { Sidebar } from "./components/Sidebar/Sidebar";
 import { useState } from "react";
 
 function App() {
-  const [darkTheme, setDarkTheme] = useState(JSON.parse(localStorage.getItem("darktheme")) || false);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const favCities = ["New York", "London", "Tokyo"];
-  
-
-  const toggleTheme = () => {
-    setDarkTheme(!darkTheme);
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("darkTheme", JSON.stringify(darkTheme));
-  };
-
 
   return (
     <div className="App">

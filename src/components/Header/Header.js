@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Moon, Sun, Menu, FileHeart } from "lucide-react"; // Icons for buttons
+import { Moon, Sun, FileHeart } from "lucide-react"; // Icons for buttons
 import "./Header.css";
 
 export const Header = ({openSidebar }) => {

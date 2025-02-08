@@ -1,4 +1,4 @@
-import { MapPin, Clock, ThermometerSun, Droplets, Wind, Sun, Heart } from "lucide-react";
+import { Clock, ThermometerSun, Droplets, Wind, Sun, Heart } from "lucide-react";
 import "./CurrentForecast.css";
 import {WeatherDetailCard} from "../Cards/WeatherDetailCard"; // Ensure this component is imported
 import { useState } from "react";
@@ -17,7 +17,6 @@ export const CurrentForecast = () => {
                 <div className="forecast-header">
                     <div className="location-time">
                         <div className="location">
-                            {/* <MapPin className="icon" /> */}
                             <span className="city">Jaipur, India</span>
                         </div>
                         <div className="time">
