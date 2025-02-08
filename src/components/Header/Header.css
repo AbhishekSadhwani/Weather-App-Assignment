@@ -1,0 +1,97 @@
+.app-header {
+    position: fixed;
+    width: 100% ;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.app-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .app-title {
+    color: var(--text-color-dark);
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.header-btn {
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-light);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+body.dark-mode .header-btn {
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+}
+
+.header-btn:hover {
+    background: var(--border-light);
+}
+
+body.dark-mode .header-btn:hover {
+    background: var(--border-dark);
+}
+
+.fav-city {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-text {
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .btn-text {
+    color: var(--text-color-dark);
+}
+
+.header-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .header-icon {
+    color: var(--text-color-dark);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .app-title {
+        font-size: 18px;
+    }
+
+    .header-btn {
+        padding: 6px;
+    }
+
+    .header-icon {
+        width: 18px;
+        height: 18px;
+    }
+}

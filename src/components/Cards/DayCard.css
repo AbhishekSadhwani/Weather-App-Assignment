@@ -1,0 +1,78 @@
+.day-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day-card:hover {
+    background: var(--border-light);
+}
+
+body.dark-mode .day-card:hover {
+    background: var(--border-dark);
+}
+
+.day-card-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.day-card-date {
+    font-weight: 500;
+    color: var(--text-color-light);
+    width: 96px;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .day-card-date {
+    color: var(--text-color-dark);
+}
+
+.day-card-icon {
+    font-weight: bold;
+}
+
+.day-card-condition {
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--text-color-light);
+    display: none;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .day-card-condition {
+    color: var(--text-color-dark);
+}
+
+@media (min-width: 640px) {
+    .day-card-condition {
+        display: block;
+    }
+}
+
+.day-card-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.day-card-high {
+    font-weight: bold;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .day-card-high {
+    color: var(--text-color-dark);
+}
+
+.day-card-low {
+    font-weight: 500;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .day-card-low {
+    color: var(--text-color-dark);
+}

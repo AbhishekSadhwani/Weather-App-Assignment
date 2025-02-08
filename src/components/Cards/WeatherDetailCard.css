@@ -1,0 +1,52 @@
+.weather-detail-card {
+    display: flex;
+    align-items: center;
+}
+
+.weather-detail-card:hover {
+    background: var(--border-light);
+}
+
+body.dark-mode .weather-detail-card:hover {
+    background: var(--border-dark);
+}
+
+.icon-container {
+    color: var(--text-color-light);
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .icon-container {
+    color: var(--text-color-dark);
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 14px;
+    color: var(--text-color-light);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .detail-label {
+    color: var(--text-color-dark);
+}
+
+.detail-value {
+    color: var(--text-color-light);
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .detail-value {
+    color: var(--text-color-dark);
+}
