@@ -19,7 +19,7 @@ export const SearchComp = () => {
                 throw new Error("Please enter a location to search");
             }
 
-            const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${inputCity}&limit=1&appid=${process.env.REACT_APP_API_KEY}`);
+            const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${inputCity}&limit=1&appid=${process.env.REACT_APP_API_KEY}`);
             const data = await response.json();
 
             console.log(data);
