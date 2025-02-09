@@ -1,14 +1,17 @@
-import SearchComp from "./components/SearchComp/SearchComp"; 
-import "./App.css";
-import { CurrentForecast } from "./components/CurrentForecastComp/CurrentForecast";
-import { FiveDayForecast } from "./components/FiveDayForecastComp/FiveDayForecast";
-import { Header } from "./components/Header/Header";
-import { Sidebar } from "./components/Sidebar/Sidebar";
+import { Header, CurrentForecast, FiveDayForecast, Sidebar, SearchComp} from "./components";
+import { useWeatherContext } from "./context/WeatherContext";
 import { useState } from "react";
+import "./App.css";
+
 
 function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const favCities = ["New York", "London", "Tokyo"];
+  const {weatherData} = useWeatherContext();
+
+  if(!weatherData){
+    return (<div>Loading....</div>);
+  }
 
   return (
     <div className="App">

@@ -61,6 +61,8 @@ body.dark-mode .header-btn:hover {
 }
 
 .btn-text {
+    font-size: 15px;
+    font-weight: 600;
     color: var(--text-color-light);
     transition: color 0.3s ease-in-out;
 }
@@ -93,5 +95,9 @@ body.dark-mode .header-icon {
     .header-icon {
         width: 18px;
         height: 18px;
+    }
+
+    .btn-text{
+        display: none;
     }
 }

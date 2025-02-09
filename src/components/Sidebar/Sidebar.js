@@ -1,8 +1,16 @@
 import React from "react";
 import "./Sidebar.css";
 import { X } from "lucide-react"; // Close icon
+import { useWeatherContext } from "../../context/WeatherContext";
 
-export const Sidebar = ({ isOpen, onClose, fav_cities }) => {
+export const Sidebar = ({ isOpen, onClose}) => {
+  const {favorites,setCity} = useWeatherContext();
+
+  const handleClick = (city) => {
+    setCity(city);
+    onClose();
+  };
+
   return (
     <div className={`theme sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-header">
@@ -12,14 +20,14 @@ export const Sidebar = ({ isOpen, onClose, fav_cities }) => {
         </button>
       </div>
       <ul className="fav-list">
-        {fav_cities.length > 0 ? (
-          fav_cities.map((city, index) => (
-            <li key={index} className="fav-item">
+        {favorites.length > 0 ? (
+          favorites.map((city, index) => (
+            <li onClick={(e) => handleClick(city)} key={index} className="fav-item">
               {city}
             </li>
           ))
         ) : (
-          <p className="no-fav">No history available</p>
+          <p className="no-fav">No Favorites Available</p>
         )}
       </ul>
     </div>

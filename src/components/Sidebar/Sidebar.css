@@ -61,6 +61,7 @@ body.dark-mode .close-icon {
 }
 
 .fav-item {
+    text-transform: capitalize;
     padding: 12px;
     margin-bottom: 10px;
     background: var(--border-light);
@@ -79,6 +80,7 @@ body.dark-mode .fav-item {
 
 .fav-item:hover {
     background: var(--card-bg-light);
+    cursor: pointer;
 }
 
 body.dark-mode .fav-item:hover {

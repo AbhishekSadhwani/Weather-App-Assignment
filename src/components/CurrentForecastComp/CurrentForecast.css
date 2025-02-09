@@ -26,6 +26,7 @@
 }
 
 .city {
+    text-transform: capitalize;
     font-size: 2rem;
     font-weight: bold;
     color: var(--text-color-light);
@@ -117,11 +118,17 @@ body.dark-mode .time {
 
 .temperature {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-light);
+}
+
+body.dark-mode .temperature{
+    border-bottom: 1px solid var(--border-dark);
 }
 
 .temp-value {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     color: var(--text-color-light);
     letter-spacing: -1px;
@@ -132,7 +139,19 @@ body.dark-mode .temp-value {
     color: var(--text-color-dark);
 }
 
+.weather{
+    display: flex;
+    align-items: center;
+}
+
+.weather img{
+    width: 100px;
+    height: 100px;
+    /* background-color: gray; */
+}
+
 .weather p {
+    /* margin-top: 30px; */
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color-light);
@@ -145,14 +164,15 @@ body.dark-mode .weather p {
 }
 
 .weather-details {
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 24px;
 }
 
 @media (min-width: 768px) {
     .weather-details {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .city {
@@ -160,10 +180,20 @@ body.dark-mode .weather p {
     }
 
     .temp-value {
-        font-size: 5rem;
+        font-size: 4rem;
     }
+
 
     .weather p {
         font-size: 18px;
     }
+}
+
+@media (max-width: 460px) {
+    .weather img{
+        width: 70px;
+        height: 70px;
+    }
+    
+    
 }
