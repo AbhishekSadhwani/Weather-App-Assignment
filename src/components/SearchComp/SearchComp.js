@@ -22,7 +22,7 @@ export const SearchComp = () => {
             const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${inputCity}&limit=1&appid=${process.env.REACT_APP_API_KEY}`);
             const data = await response.json();
 
-            console.log(data);
+            // console.log(data);
             if(data.length !== 0){
                 setCity(inputCity);
                 setInputCity("");

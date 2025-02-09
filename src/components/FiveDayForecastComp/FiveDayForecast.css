@@ -1,6 +1,12 @@
+.week-forecast-container {
+    border-radius: 24px;
+    padding: 14px;
+}
+
 .forecast-title {
     font-size: 1.25rem;
     font-weight: bold;
+    margin-top: 10px;
     margin-bottom: 24px;
     color: var(--text-color-light);
     transition: color 0.3s ease-in-out;
