@@ -1,6 +1,7 @@
 .week-forecast-container {
     border-radius: 24px;
     padding: 16px;
+    overflow-x: auto;
 }
 
 .forecast-title {
