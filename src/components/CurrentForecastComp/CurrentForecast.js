@@ -2,10 +2,13 @@ import { Clock, Droplets, Wind, Heart } from "lucide-react";
 import {WeatherDetailCard} from "../Cards/WeatherDetailCard";
 import { useWeatherContext } from "../../context/WeatherContext";
 import "./CurrentForecast.css";
+import { useState } from "react";
 
 export const CurrentForecast = () => {
     const {city, weatherData,favorites, addFavorites, removeFavorites } = useWeatherContext();
     const isFav = favorites.includes(city.toLowerCase());
+    const [inFahrenheit, setInFahrenheit] = useState(false);
+    
     // changing unix value to current date and time
     const date = new Date(weatherData.current.dt * 1000);
     const day = date.toLocaleDateString("en-US", {timeZone: weatherData.timezone,weekday: 'long'});
@@ -40,11 +43,16 @@ export const CurrentForecast = () => {
                     </div>
                 </div>
                 <div className="temperature">
-                        <span className="temp-value">{weatherData.current.temp}&deg;</span>
-                        <div className="weather">
-                            <img src={`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}.png`} alt={weatherData.current.weather[0].main}/>
-                            <p>{weatherData.current.weather[0].main}</p>
-                        </div>
+                    <div className="temp-container">
+                        <span className="temp-value">
+                            {inFahrenheit ? `${(Math.round(((weatherData.current.temp*(9/5)) + 32)*10)/10)}°f`  : `${weatherData.current.temp}°c`}
+                        </span>
+                        <button onClick={() => setInFahrenheit(!inFahrenheit)}>{inFahrenheit ? "To Celsius" : "To Fahrenheit"}</button>
+                    </div>
+                    <div className="weather">
+                        <img src={`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}.png`} alt={weatherData.current.weather[0].main}/>
+                        <p>{weatherData.current.weather[0].main}</p>
+                    </div>
                 </div>
                 <div className="weather-details">
                     {/* <WeatherDetailCard icon={<ThermometerSun className="icon" />} label="Feels like" value={`27°`} /> */}

@@ -127,8 +127,33 @@ body.dark-mode .temperature{
     border-bottom: 1px solid var(--border-dark);
 }
 
+.temp-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.temp-container button{
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+@media (max-width:460px){
+    .temp-container{
+        display: flex;
+        flex-direction: column;
+    }   
+
+    .temp-container button{
+        margin-top: 0;
+        align-self: self-start;
+        margin-bottom: 5px;
+    }
+}
+
+
 .temp-value {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--text-color-light);
     letter-spacing: -1px;
@@ -147,17 +172,27 @@ body.dark-mode .temp-value {
 .weather img{
     width: 100px;
     height: 100px;
-    /* background-color: gray; */
 }
 
 .weather p {
-    /* margin-top: 30px; */
     font-size: 16px;
     font-weight: 500;
     color: var(--text-color-light);
     text-transform: capitalize;
     transition: color 0.3s ease-in-out;
 }
+
+
+@media (max-width:460px){
+    .weather{
+        flex-direction: column;
+    }
+    
+    .weather p{
+        margin-bottom: 10px;
+    }
+}
+
 
 body.dark-mode .weather p {
     color: var(--text-color-dark);
