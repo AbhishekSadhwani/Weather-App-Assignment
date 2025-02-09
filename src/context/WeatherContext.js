@@ -23,7 +23,7 @@ export const WeatherProvider = ({children}) => {
         const fetchWeather = async () => {
             try{
                 // fetching lat and lon for city
-                const geoResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${state.city}&limit=1&appid=${process.env.REACT_APP_API_KEY}`);
+                const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${state.city}&limit=1&appid=${process.env.REACT_APP_API_KEY}`);
                 const geoData = await geoResponse.json();
                 
                 if(geoData.length === 0){
