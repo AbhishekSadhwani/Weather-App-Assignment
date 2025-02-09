@@ -2,6 +2,7 @@ import { Search } from 'lucide-react';
 import { useState } from 'react';
 import { useWeatherContext } from '../../context/WeatherContext';
 import "./SearchComp.css";
+import { toast } from 'react-toastify';
 
 
 export const SearchComp = () => {
@@ -29,11 +30,10 @@ export const SearchComp = () => {
             }
             else{
                 setInputCity("");
-                throw new Error("City not Found");
+                throw new Error("City not Found.Check Spelling");
             }
         }catch(error){
-            console.log(error);
-            // toast.error("Please enter a location to search", {position:toastPosition,style:{width:"250px",borderRadius:"10px"} ,closeButton:true, autoClose:3000});
+            toast.error(error.message, {position:'top-right',style:{width:"250px",borderRadius:"10px"} ,closeButton:true, autoClose:3000});
         }
 
     };

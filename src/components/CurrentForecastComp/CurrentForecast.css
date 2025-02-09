@@ -136,6 +136,19 @@ body.dark-mode .temperature{
 .temp-container button{
     font-size: 12px;
     margin-top: 25px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    background-color: var(--card-bg-light);
+    color: var(--text-color-light);
+    transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode .temp-container button{
+    border: 1px solid var(--border-dark);
+    background-color: var(--card-bg-dark);
+    color: var(--text-color-dark);
+
 }
 
 @media (max-width:460px){

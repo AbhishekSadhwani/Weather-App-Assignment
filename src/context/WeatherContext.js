@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import { WeatherReducer } from "../reducer/WeatherReducer";
+import { toast } from "react-toastify";
 
 // initial state variables
 const initialState = {
@@ -7,7 +8,6 @@ const initialState = {
     city: localStorage.getItem("lastCity") || "Jaipur",
     favorites: JSON.parse(localStorage.getItem("favorites")) || []
 };
-
 
 // creating weather context
 const WeatherContext = createContext(initialState);
@@ -51,8 +51,7 @@ export const WeatherProvider = ({children}) => {
                 
     
             }catch(error){
-                console.log(`Error Fetching data: ${error}`);
-                // toast(`Error Fetching data: ${error}`, {position:"top-right",style:{width:"250px",borderRadius:"10px"} ,closeButton:true, autoClose:3000});
+                toast.error(error.message, {position:"top-right",style:{width:"250px",borderRadius:"10px"} ,closeButton:true, autoClose:3000});
                 
             };
         

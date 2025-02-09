@@ -1,0 +1,70 @@
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--card-bg-light);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .skeleton-container {
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.skeleton-header,
+.skeleton-temp,
+.skeleton-info,
+.skeleton-day {
+    background: var(--border-light);
+    height: 20px;
+    border-radius: 8px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+body.dark-mode .skeleton-header,
+body.dark-mode .skeleton-temp,
+body.dark-mode .skeleton-info,
+body.dark-mode .skeleton-day {
+    background: var(--border-dark);
+}
+
+.skeleton-header {
+    width: 50%;
+    height: 24px;
+}
+
+.skeleton-temp {
+    width: 30%;
+    height: 48px;
+}
+
+.skeleton-info {
+    width: 80%;
+    height: 16px;
+}
+
+.skeleton-week {
+    display: flex;
+    gap: 12px;
+}
+
+.skeleton-day {
+    flex: 1;
+    height: 40px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}

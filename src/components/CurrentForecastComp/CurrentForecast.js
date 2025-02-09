@@ -55,10 +55,8 @@ export const CurrentForecast = () => {
                     </div>
                 </div>
                 <div className="weather-details">
-                    {/* <WeatherDetailCard icon={<ThermometerSun className="icon" />} label="Feels like" value={`27°`} /> */}
                     <WeatherDetailCard icon={<Droplets className="icon" />} label="Humidity" value={`${weatherData.current.humidity} %`} />
                     <WeatherDetailCard icon={<Wind className="icon" />} label="Wind" value={`${weatherData.current.wind_speed} m/s`} />
-                    {/* <WeatherDetailCard icon={<Sun className="icon" />} label="UV Index" value={0} /> */}
                 </div>
             </div>
         </div>
