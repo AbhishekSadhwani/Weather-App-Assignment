@@ -85,7 +85,8 @@ export const SearchComp = () => {
                     type="text" 
                     name="city"
                     value={inputCity}
-                    onChange={(e) => setInputCity(e.target.value)} 
+                    onChange={(e) => setInputCity(e.target.value)}
+                    autoComplete='off'
                 />
                 <button onClick={handleSubmit} type='submit'><Search className="search-icon" /></button>
 

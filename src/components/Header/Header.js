@@ -15,7 +15,7 @@ export const Header = ({openSidebar }) => {
 
     return (
         <header className="theme app-header">
-            <a className="app-title" href="/">Weather App</a>
+            <a className="app-title" href="/">WeatherSync</a>
             <div className="header-buttons">
                 <button className="header-btn fav-city" onClick={openSidebar}>
                     <span className="btn-text">Favourite Cities</span> 
