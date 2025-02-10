@@ -103,6 +103,8 @@ export const WeatherProvider = ({children}) => {
 
     // function to empty the favorites list when user performs action
     const clearFavorites = () => {
+        // update the list in localStorage
+        localStorage.setItem("favorites", JSON.stringify([]));
         dispatch({
             type:"CLEAR_FAVORITES",
             payload:{

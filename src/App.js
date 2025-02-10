@@ -9,6 +9,7 @@ function App() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
   const {weatherData} = useWeatherContext();
 
+  // show skeleton loader if weather data is not available
   if(!weatherData){
     return (<SkeletonLoader />);
   }
