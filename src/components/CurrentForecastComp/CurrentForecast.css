@@ -14,6 +14,7 @@
     justify-content: space-between;
 }
 
+/* location and time */
 .location-time {
     display: flex;
     flex-direction: column;
@@ -37,6 +38,35 @@ body.dark-mode .city {
     color: var(--text-color-dark);
 }
 
+
+.clock-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .clock-icon {
+    color: var(--text-color-dark);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
+}
+
+body.dark-mode .time {
+    color: var(--text-color-dark);
+}
+
+
+
+/* favorite button */
 .favorite-btn {
     background: var(--card-bg-light);
     border: 1px solid var(--border-light);
@@ -72,50 +102,24 @@ body.dark-mode .favorite-btn:hover {
     width: 24px;
     height: 24px;
     transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
-    stroke: var(--text-color-light);
+    stroke: #FF0000;
 }
 
 body.dark-mode .favorite-icon {
-    stroke: var(--text-color-dark);
+    stroke: #FF0000;
 }
 
 .favorited .favorite-icon {
-    fill: var(--text-color-light);
-    stroke: var(--text-color-light);
+    fill: #FF0000;
+    stroke: #FF0000;
 }
 
 body.dark-mode .favorited .favorite-icon {
-    fill: var(--text-color-dark);
-    stroke: var(--text-color-dark);
+    fill: #FF0000;
+    stroke: #FF0000;
 }
 
-
-
-.icon-small {
-    height: 20px;
-    width: 20px;
-    margin-right: 8px;
-    color: var(--text-color-light);
-    transition: color 0.3s ease-in-out;
-}
-
-body.dark-mode .icon-small {
-    color: var(--text-color-dark);
-}
-
-.time {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-color-light);
-    transition: color 0.3s ease-in-out;
-}
-
-body.dark-mode .time {
-    color: var(--text-color-dark);
-}
-
+/* temprature */
 .temperature {
     display: flex;
     align-items: center;
@@ -151,20 +155,6 @@ body.dark-mode .temp-container button{
 
 }
 
-@media (max-width:460px){
-    .temp-container{
-        display: flex;
-        flex-direction: column;
-    }   
-
-    .temp-container button{
-        margin-top: 0;
-        align-self: self-start;
-        margin-bottom: 5px;
-    }
-}
-
-
 .temp-value {
     font-size: 2rem;
     font-weight: bold;
@@ -182,11 +172,6 @@ body.dark-mode .temp-value {
     align-items: center;
 }
 
-.weather img{
-    width: 100px;
-    height: 100px;
-}
-
 .weather p {
     font-size: 16px;
     font-weight: 500;
@@ -194,18 +179,6 @@ body.dark-mode .temp-value {
     text-transform: capitalize;
     transition: color 0.3s ease-in-out;
 }
-
-
-@media (max-width:460px){
-    .weather{
-        flex-direction: column;
-    }
-    
-    .weather p{
-        margin-bottom: 10px;
-    }
-}
-
 
 body.dark-mode .weather p {
     color: var(--text-color-dark);
@@ -216,6 +189,31 @@ body.dark-mode .weather p {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 24px;
+}
+
+/* media queries */
+
+@media (max-width:460px){
+    .temp-container{
+        display: flex;
+        flex-direction: column;
+    }   
+
+    .temp-container button{
+        margin-top: 0;
+        align-self: self-start;
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width:460px){
+    .weather{
+        flex-direction: column;
+    }
+    
+    .weather p{
+        margin-bottom: 10px;
+    }
 }
 
 @media (min-width: 768px) {

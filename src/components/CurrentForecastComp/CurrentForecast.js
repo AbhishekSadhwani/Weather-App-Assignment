@@ -32,7 +32,7 @@ export const CurrentForecast = () => {
                             <span className="city">{city}, {weatherData.country}</span>
                         </div>
                         <div className="time">
-                            <Clock className="icon-small" />
+                            <Clock className="clock-icon" />
                             <span>{day} {currenttime}</span>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ export const CurrentForecast = () => {
                         <button onClick={() => setInFahrenheit(!inFahrenheit)}>{inFahrenheit ? "To Celsius" : "To Fahrenheit"}</button>
                     </div>
                     <div className="weather">
-                        <img src={`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}.png`} alt={weatherData.current.weather[0].main}/>
+                        <img src={`https://openweathermap.org/img/wn/${weatherData.current.weather[0].icon}@2x.png`} alt={weatherData.current.weather[0].main}/>
                         <p>{weatherData.current.weather[0].main}</p>
                     </div>
                 </div>

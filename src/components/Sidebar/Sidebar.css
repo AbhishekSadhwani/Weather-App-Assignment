@@ -4,6 +4,7 @@
     top: 0;
     right: -300px; 
     width: 300px;
+    z-index: 10;
     height: 100vh;
     padding: 20px;
     display: flex;
@@ -95,6 +96,29 @@ body.dark-mode .fav-item:hover {
 
 body.dark-mode .no-fav {
     color: var(--text-color-dark);
+}
+
+
+.fav-clear-btn{
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-dark);
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+body.dark-mode .fav-clear-btn {
+    background: var(--card-bg-dark);
+    color: var(--text-color-dark);
+    border: 1px solid var(--border-light);
+}
+
+.fav-clear-btn:hover {
+    background: var(--border-light);
+}
+
+body.dark-mode .fav-clear-btn:hover {
+    background: var(--border-dark);
 }
 
 

@@ -4,8 +4,9 @@ import { X } from "lucide-react"; // Close icon
 import { useWeatherContext } from "../../context/WeatherContext";
 
 export const Sidebar = ({ isOpen, onClose}) => {
-  const {favorites,setCity} = useWeatherContext();
+  const {favorites,setCity, clearFavorites} = useWeatherContext();
 
+  // when a favorite city is clicked, set the city state variable to the clicked city and close the sidebar
   const handleClick = (city) => {
     setCity(city);
     onClose();
@@ -22,7 +23,7 @@ export const Sidebar = ({ isOpen, onClose}) => {
       <ul className="fav-list">
         {favorites.length > 0 ? (
           favorites.map((city, index) => (
-            <li onClick={(e) => handleClick(city)} key={index} className="fav-item">
+            <li key={index} onClick={(e) => handleClick(city)} className="fav-item">
               {city}
             </li>
           ))
@@ -30,6 +31,7 @@ export const Sidebar = ({ isOpen, onClose}) => {
           <p className="no-fav">No Favorites Available</p>
         )}
       </ul>
+      <button className="fav-clear-btn" onClick={clearFavorites}>Clear</button>
     </div>
   );
 };

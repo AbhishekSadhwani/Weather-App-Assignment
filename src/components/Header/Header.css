@@ -1,6 +1,6 @@
 .app-header {
     position: fixed;
-    width: 100% ;
+    width: 100%;
     top: 0;
     left: 0;
     border-radius: 0;
@@ -13,6 +13,7 @@
 }
 
 .app-title {
+    text-decoration: none;
     font-size: 25px;
     font-weight: bold;
     color: var(--text-color-light);
@@ -82,10 +83,10 @@ body.dark-mode .header-icon {
     color: var(--text-color-dark);
 }
 
-/* Responsive */
+/* media queries */
 @media (max-width: 640px) {
     .app-title {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .header-btn {

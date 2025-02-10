@@ -4,6 +4,7 @@
 }
 
 .search-box {
+    position: relative;
     display: flex;
     align-items: center;
     color: var(--text-color-light);
@@ -14,20 +15,24 @@ body.dark-mode .search-box {
     color: var(--text-color-dark);
 }
 
-.search-icon {
-    height: 20px;
-    width: 20px;
-    margin-left: 12px;
-    color: var(--text-color-light);
-    transition: color 0.3s ease-in-out;
-}
 
 body.dark-mode .search-icon {
     color: var(--text-color-dark);
 }
 
-.search-form {
-    flex: 1;
+.search-box button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    color: var(--text-color-light);
+    transition: color 0.3s ease-in-out;
 }
 
 .search-input {
@@ -54,4 +59,40 @@ body.dark-mode .search-input {
 
 body.dark-mode .search-input::placeholder {
     color: var(--text-color-dark);
+}
+
+/* city suggestion */
+.suggestions-dropdown {
+    position: absolute;
+    top: 40px;
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+body.dark-mode .suggestions-dropdown {
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.suggestions-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.suggestions-dropdown li:hover {
+    background: var(--border-light);
+}
+
+body.dark-mode .suggestions-dropdown li:hover {
+    background: var(--border-dark);
 }
