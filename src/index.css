@@ -8,7 +8,7 @@
   font-family: "Poppins",sans-serif;
 }
 
-
+/* default values */
 :root {
   --bg-color-light: #f9f9f9;
   --text-color-light: #333;
@@ -21,11 +21,10 @@
   --border-dark: #444;
 }
 
-/* Default theme (light mode) */
+/* light mode */
 body {
   background-color: var(--bg-color-light);
   color: var(--text-color-light);
-  transition: all 0.3s ease-in-out;
 }
 
 /* Dark mode */
@@ -40,7 +39,6 @@ body.dark-mode {
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
 }
 
 body.dark-mode .theme {

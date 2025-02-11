@@ -76,7 +76,7 @@ body.dark-mode .time {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    /* transition: background 0.3s ease-in-out, transform 0.2s ease-in-out; */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -145,7 +145,6 @@ body.dark-mode .temperature{
     border: 1px solid var(--border-light);
     background-color: var(--card-bg-light);
     color: var(--text-color-light);
-    transition: all 0.3s ease-in-out;
 }
 
 body.dark-mode .temp-container button{

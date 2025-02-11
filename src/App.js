@@ -1,4 +1,4 @@
-import { Header, CurrentForecast, FiveDayForecast,Sidebar, SearchComp} from "./components";
+import { Header, CurrentForecast, FiveDayForecast,Sidebar, SearchComp, Footer} from "./components";
 import { useWeatherContext } from "./context/WeatherContext";
 import { useState } from "react";
 import SkeletonLoader from "./components/SkeletonLoader/skeletonLoader";
@@ -23,6 +23,7 @@ function App() {
         <CurrentForecast />
         <FiveDayForecast />
       </div>
+      <Footer />
     </div>
   );
 }

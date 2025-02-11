@@ -1,5 +1,7 @@
 export { Header } from "./Header/Header";
 
+export { Footer } from "./Footer/Footer";
+
 export {CurrentForecast} from "./CurrentForecastComp/CurrentForecast";
 
 export { FiveDayForecast } from "./FiveDayForecastComp/FiveDayForecast";
