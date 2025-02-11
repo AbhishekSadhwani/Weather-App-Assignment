@@ -2,14 +2,13 @@
     padding: 26px 0;
     display: flex;
     gap: 16px;
-    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-x: auto; 
     white-space: nowrap;
     padding-bottom: 10px;
-    scroll-snap-type: x mandatory; /* Smooth scrolling */
 }
 
 .forecast-grid::-webkit-scrollbar {
-    height: 6px; /* Smaller scrollbar */
+    height: 8px; 
 }
 
 .forecast-grid::-webkit-scrollbar-thumb {
@@ -23,6 +22,5 @@ body.dark-mode .forecast-grid::-webkit-scrollbar-thumb {
 
 .forecast-grid > * {
     flex: 0 0 auto; 
-    scroll-snap-align: start;
     width: 180px;
 }

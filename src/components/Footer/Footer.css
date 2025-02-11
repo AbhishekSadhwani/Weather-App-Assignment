@@ -3,3 +3,7 @@ footer{
     padding-top: 25px;
     text-align: center;
 }   
+
+footer p{
+    font-size: 14px;
+}
