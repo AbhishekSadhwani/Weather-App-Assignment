@@ -5,8 +5,6 @@ import "./FiveDayForecast.css";
 export const FiveDayForecast = () => {
   const {weatherData} = useWeatherContext();
   const currentDate = new Date(weatherData.current.dt *1000).toLocaleDateString();
-  console.log(weatherData);
-  console.log(currentDate);
 
   return (
     <section className="theme week-forecast-container">
