@@ -154,6 +154,11 @@ body.dark-mode .temp-container button{
 
 }
 
+.temp-container button:hover{
+    cursor: pointer;
+}
+
+
 .temp-value {
     font-size: 2rem;
     font-weight: bold;

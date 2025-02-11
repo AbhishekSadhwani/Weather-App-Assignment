@@ -29,7 +29,7 @@ export const WeatherProvider = ({children}) => {
                 if(geoData.length === 0){
                     throw new Error('City not found');
                 }
-                
+                console.log(geoData);
                 const {lat,lon} = geoData[0];
     
                 const weatherResponse = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
@@ -45,7 +45,7 @@ export const WeatherProvider = ({children}) => {
                 dispatch({
                     type:"SET_WEATHER_DATA",
                     payload:{
-                        weatherData:{...new_data,daily:dailyData,country:geoData[0].country}
+                        weatherData:{...new_data,daily:dailyData,state:geoData[0].state,country:geoData[0].country}
                     }
                 });
                 

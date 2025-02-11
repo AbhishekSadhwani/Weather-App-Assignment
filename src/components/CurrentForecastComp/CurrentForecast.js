@@ -29,7 +29,7 @@ export const CurrentForecast = () => {
                 <div className="forecast-header">
                     <div className="location-time">
                         <div className="location">
-                            <span className="city">{city}, {weatherData.country}</span>
+                            <span className="city">{city}, {weatherData.state}, {weatherData.country}</span>
                         </div>
                         <div className="time">
                             <Clock className="clock-icon" />
