@@ -13,11 +13,17 @@ export const FiveDayForecast = () => {
         {weatherData.daily.map((dayData, index) => (
           <DayCard
             key={index}
-            date={new Date(dayData.dt * 1000).toLocaleDateString() !== currentDate ? new Date(dayData.dt * 1000).toLocaleDateString("en-us",{
-              weekday: "short",
-              month: "short",
-              day: "numeric",
-            }) : "Today"}
+            date=
+              {new Date(dayData.dt * 1000).toLocaleDateString() !== currentDate ? 
+                new Date(dayData.dt * 1000).toLocaleDateString("en-us",{
+                  weekday: "short",
+                  month: "short",
+                  day: "numeric",
+                }) 
+                : 
+                "Today"
+              }
+              
             icon={<img src={`https://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`} alt={dayData.weather[0].main}/>}
             weather_condition={dayData.weather[0].description}
             highTemp={dayData.temp.max}

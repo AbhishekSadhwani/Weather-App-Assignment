@@ -9,3 +9,5 @@ export { FiveDayForecast } from "./FiveDayForecastComp/FiveDayForecast";
 export { SearchComp } from "./SearchComp/SearchComp";
 
 export { Sidebar } from "./Sidebar/Sidebar";
+
+export { SkeletonLoader } from "./SkeletonLoader/SkeletonLoader";

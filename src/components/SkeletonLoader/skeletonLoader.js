@@ -1,7 +1,7 @@
 import React from "react";
 import "./skeletonLoader.css";
 
-const SkeletonLoader = () => {
+export const SkeletonLoader = () => {
     return (
         <div className="skeleton-container">
             <div className="skeleton-header"></div>
@@ -16,4 +16,3 @@ const SkeletonLoader = () => {
     );
 };
 
-export default SkeletonLoader;
