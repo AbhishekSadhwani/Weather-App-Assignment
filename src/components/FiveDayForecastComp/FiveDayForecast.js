@@ -23,7 +23,6 @@ export const FiveDayForecast = () => {
                 : 
                 "Today"
               }
-              
             icon={<img src={`https://openweathermap.org/img/wn/${dayData.weather[0].icon}@2x.png`} alt={dayData.weather[0].main}/>}
             weather_condition={dayData.weather[0].description}
             highTemp={dayData.temp.max}
