@@ -10,4 +10,4 @@ export { SearchComp } from "./SearchComp/SearchComp";
 
 export { Sidebar } from "./Sidebar/Sidebar";
 
-export { SkeletonLoader } from "./SkeletonLoader/SkeletonLoader";
+export { SkeletonLoader } from "./SkeletonLoader/skeletonLoader";
